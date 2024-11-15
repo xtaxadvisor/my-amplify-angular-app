@@ -1,5 +1,4 @@
-declare module "../aws-exports" {
-    const awsmobile: any;
-    export default awsmobile;
-  }
-  
+declare module '../aws-exports' {
+  const config: any;
+  export default config;
+}
