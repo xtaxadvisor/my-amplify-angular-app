@@ -15,7 +15,7 @@ frontend:
       commands:
         - ng build --configuration=production
   artifacts:
-    baseDirectory: dist/<my-amplify-angular-app>
+    baseDirectory: dist/amplify-angular-template  
     files:
       - '**/*'
   cache:

@@ -1,17 +1,14 @@
-import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Component, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { TodosComponent } from './todos/todos.component';
-import { Amplify } from 'aws-amplify';
-import outputs from '../../amplify_outputs.json';
-
-Amplify.configure(outputs);
+import { RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-root',
   standalone: true,
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css',
+  styleUrls: ['./app.component.css'],
   imports: [RouterOutlet, TodosComponent],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA] // Add this line to allow custom elements
 })
 export class AppComponent {
   title = 'amplify-angular-template';
