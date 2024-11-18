@@ -12,6 +12,12 @@
       "AmplifyAppId": "djafjj3zcro1g"
     },
     "categories": {
+      "hosting": {
+        "amplifyhosting": {
+          "appId": "djafjj3zcro1g",
+          "type": "manual"
+        }
+      },
       "auth": {
         "amplifyproject4e25a995": {}
       },
