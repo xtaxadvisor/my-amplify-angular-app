@@ -1,18 +1,17 @@
-version: 1
 frontend:
   phases:
     preBuild:
       commands:
+        - nvm install 20
+        - nvm use 20
         - npm ci
     build:
       commands:
-        - ng build --configuration production
+        - npm run build
   artifacts:
-    baseDirectory: dist/amplify-angular-template
+    baseDirectory: dist
     files:
       - '**/*'
   cache:
     paths:
       - node_modules/**/*
-      - .npm
-      
