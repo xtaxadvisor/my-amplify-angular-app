@@ -6,11 +6,11 @@ frontend:
         - npm ci
     build:
       commands:
-        - npm run build -- --output-path=dist/amplify-angular-template --configuration production
+        - npm run build -- --output-path=dist/amplify-angular-template
   artifacts:
     baseDirectory: dist/amplify-angular-template
     files:
       - '**/*'
   cache:
     paths:
-      - node_modules/**/* 
+      - node_modules/**/*
