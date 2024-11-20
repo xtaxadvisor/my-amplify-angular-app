@@ -7,10 +7,14 @@ const AWS = require('aws-sdk');
 const dynamoDb = new AWS.DynamoDB.DocumentClient();
 
 exports.handler = async (event) => {
-    console.log(`EVENT: ${JSON.stringify(event)}`);
+    console.log(`Event Received",(event);
+        return {
+               statusCode: 200,
+            body: JSON.stringify('Hello from Lambda!'),
+        }
 
     // Parse the event for any specific action or parameters (e.g., from an API Gateway request)
-    const { httpMethod, path, body } = event;
+    const { httpMethod, body } = event;
     const data = JSON.parse(body);
 
     let response;
@@ -40,11 +44,10 @@ exports.handler = async (event) => {
     // Return the response, with optional CORS headers if needed
     return {
         statusCode: response.statusCode || 200,
-        // Uncomment to enable CORS
-        // headers: {
-        //     "Access-Control-Allow-Origin": "*",
-        //     "Access-Control-Allow-Headers": "*"
-        // },
+        headers: {
+            "Access-Control-Allow-Origin": "*", // Enable CORS if needed
+            "Access-Control-Allow-Headers": "*",
+        },
         body: JSON.stringify(response.body),
     };
 };
@@ -53,7 +56,7 @@ exports.handler = async (event) => {
 
 const createItem = async (itemData) => {
     const params = {
-        TableName: 'YourTableName',
+        TableName: 'YourTableName', // Replace with your DynamoDB table name
         Item: itemData,
     };
     await dynamoDb.put(params).promise();
@@ -62,7 +65,7 @@ const createItem = async (itemData) => {
 
 const getItem = async (id) => {
     const params = {
-        TableName: 'YourTableName',
+        TableName: 'YourTableName', // Replace with your DynamoDB table name
         Key: { id },
     };
     const result = await dynamoDb.get(params).promise();
@@ -71,7 +74,7 @@ const getItem = async (id) => {
 
 const updateItem = async (itemData) => {
     const params = {
-        TableName: 'YourTableName',
+        TableName: 'YourTableName', // Replace with your DynamoDB table name
         Key: { id: itemData.id },
         UpdateExpression: 'set #attrName = :attrValue', // Replace with actual attribute names and values
         ExpressionAttributeNames: { '#attrName': 'exampleAttribute' },
@@ -84,9 +87,8 @@ const updateItem = async (itemData) => {
 
 const deleteItem = async (id) => {
     const params = {
-        TableName: 'YourTableName',
+        TableName: 'amplifyproject4e25a995-ItemsTable-dev', // Replace with your DynamoDB table name
         Key: { id },
     };
     await dynamoDb.delete(params).promise();
-    return { statusCode: 200, body: 'Item deleted successfully' };
-};
+    return {statusCode: 200, body: 'Item deleted successfully' };

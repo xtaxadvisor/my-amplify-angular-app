@@ -20,6 +20,12 @@
           "deploymentBucketName": "amplify-amplifyproject-dev-c84ab-deployment",
           "s3Key": "amplify-builds/amplifyprojectbb1f1616-69525975484d796d5870-build.zip"
         }
+      },
+      "api": {
+        "amplifyproject": {}
+      },
+      "hosting": {
+        "S3AndCloudFront": {}
       }
     }
   }

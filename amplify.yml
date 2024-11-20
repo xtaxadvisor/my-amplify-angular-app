@@ -3,14 +3,16 @@ frontend:
   phases:
     preBuild:
       commands:
-        - npm ci
+        - npm install
     build:
       commands:
         - npm run build
-  artifacts:
-    baseDirectory: dist/amplify-angular-template/browser
-    files:
-      - '**/*'
-  cache:
-    paths:
-      - node_modules/**/*
+artifacts:
+  baseDirectory: build
+  files:
+    - '**/*'
+cache:
+  paths:
+    - node_modules/**/*
+
+# Keep the changes you prefer or merge them logically
