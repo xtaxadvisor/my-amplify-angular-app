@@ -1,9 +1,9 @@
+version: 1
 frontend:
   phases:
+    preBuild:
+      commands:
+        - npm install
     build:
       commands:
         - npm run build -- --output-path=dist/amplify-angular-template
-  artifacts:
-    baseDirectory: dist/amplify-angular-template
-    files:
-      - '**/*'
