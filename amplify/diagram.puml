@@ -1,0 +1,29 @@
+@startuml DiagramBorderColor
+actor User
+actor Admin
+boundary "Frontend" as FE
+control "Backend" as BE
+database "Database" as DB
+
+User -> FE : Login
+FE -> BE : Authenticate
+BE -> DB : Validate Credentials
+DB -> BE : Success/Failure
+BE -> FE : Response
+
+User -> FE : Access Dashboard
+FE -> BE : Fetch Data
+BE -> DB : Query User Info, Documents, Notifications
+DB --> BE : Data
+BE --> FE : Render Dashboard
+
+User -> FE : Use Tax Projection Tool
+FE -> BE : Send Input Data
+BE -> DB : Fetch Tax Rules
+BE -> FE : Return Estimated Projection
+
+User -> FE : Schedule Appointment
+FE -> BE : Submit Details
+BE -> DB : Store Appointment
+DB --> BE : Confirmation
+BE --> FE : Notify Confirmation
