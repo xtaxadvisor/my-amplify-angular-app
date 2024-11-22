@@ -20,6 +20,7 @@
     "@angular/platform-browser": "^19.0.0",
     "@angular/platform-browser-dynamic": "^19.0.0",
     "@angular/router": "^19.0.0",
+    "@aws-amplify/ui-react": "^6.7.0",
     "@npmcli/package-json": "^6.0.1",
     "aws-amplify": "^6.9.0",
     "aws-sdk": "^2.1692.0",
@@ -60,7 +61,7 @@
     "rimraf": "^6.0.1",
     "tailwindcss": "^3.4.15",
     "tsx": "^4.19.2",
-    "typescript": "^5.6.3",
+    "typescript": "^5.5.2",
     "typescript-eslint": "^8.15.0"
   }
 }

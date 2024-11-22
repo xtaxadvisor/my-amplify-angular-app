@@ -1,0 +1,23 @@
+[33me7ae28d[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m latest changes 535
+[33m5d10402[m Save changes before updating Angular
+[33m56d1efc[m Fix build path and polyfills inclusion
+[33m5e26ca5[m Your commit message here
+[33m445adfb[m Add feature X or fix bug Y
+[33m543669c[m Added polyfills.ts and ensured build configurations
+[33me6c54a6[m Resolved npm errors and regenerated package-lock.json
+[33me58a1f5[m Updated amplify.yml with correct output directory for Angular app
+[33mdb6d5e2[m Updated Lambda function and added event.json for local testing
+[33mffcb9d0[m Update files for redeployment
+[33m456699a[m Update build settings in amplify.yml
+[33m72a70b4[m Update .gitignore to exclude main
+[33mf51df82[m Add main file
+[33m4b57cd4[m Update package files
+[33m9e7c1d6[m Update amplify.yml to fix YAML syntax and use Node.js 20
+[33m77ca0de[m Update Amplify build settings to correct output directory
+[33meb0b8b7[m Update Node.js version in Amplify build environment
+[33m858a2ac[m Build and deploy Angular app
+[33m7953241[m[33m ([m[1;32mdev[m[33m)[m Update project configuration and add Amplify backend files
+[33mfb339ba[m Fixed indentation in amplify.yml
+[33md347099[m Create webpack.yml
+[33maa1cf6b[m Create generator-generic-ossf-slsa3-publish.yml
+[33mb116646[m Initial commit

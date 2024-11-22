@@ -3,7 +3,14 @@ frontend:
   phases:
     preBuild:
       commands:
-        - npm install
+        - npm ci
     build:
       commands:
-        - npm run build -- --output-path=dist/amplify-angular-template
+        - npm run build -- --prod
+  artifacts:
+    baseDirectory: dist/<your-angular-project-name> # Replace with the name of your Angular project folder inside `dist`
+    files:
+      - '**/*'
+  cache:
+    paths:
+      - node_modules/**/*
